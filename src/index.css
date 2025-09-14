@@ -2,39 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Gamified Environmental Education App Design System
+All colors MUST be HSL. Eco-friendly, modern, youthful palette.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base Colors - Clean and fresh */
+    --background: 120 20% 98%;
+    --foreground: 160 40% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card system - Clean with subtle eco tints */
+    --card: 120 15% 99%;
+    --card-foreground: 160 35% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 120 15% 99%;
+    --popover-foreground: 160 35% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Forest Green (Eco-themed) */
+    --primary: 142 76% 36%;
+    --primary-foreground: 120 20% 98%;
+    --primary-glow: 142 86% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Ocean Blue */
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 120 20% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Natural gray-green */
+    --muted: 120 15% 95%;
+    --muted-foreground: 160 25% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Vibrant eco-green */
+    --accent: 142 86% 45%;
+    --accent-foreground: 160 40% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success/Growth - Bright green */
+    --success: 120 100% 35%;
+    --success-foreground: 120 20% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive - Earth red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 120 20% 98%;
+
+    /* Interactive elements */
+    --border: 120 25% 88%;
+    --input: 120 25% 88%;
+    --ring: 142 76% 36%;
+
+    /* Gradients - Nature-inspired */
+    --gradient-eco: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--secondary)), hsl(120 100% 35%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(120 15% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%), hsl(217 91% 60%), hsl(120 100% 35%));
+
+    /* Shadows - Eco-themed with green tints */
+    --shadow-eco: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -56,33 +84,44 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - Deep forest theme */
+    --background: 160 40% 8%;
+    --foreground: 120 25% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 160 35% 10%;
+    --card-foreground: 120 25% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 160 35% 10%;
+    --popover-foreground: 120 25% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 86% 45%;
+    --primary-foreground: 160 40% 8%;
+    --primary-glow: 142 86% 55%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 217 91% 65%;
+    --secondary-foreground: 160 40% 8%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 160 25% 15%;
+    --muted-foreground: 120 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 120 100% 40%;
+    --accent-foreground: 160 40% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 120 100% 40%;
+    --success-foreground: 160 40% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 160 40% 8%;
+
+    --border: 160 25% 20%;
+    --input: 160 25% 20%;
+    --ring: 142 86% 45%;
+
+    /* Dark gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-ocean: linear-gradient(135deg, hsl(var(--secondary)), hsl(120 100% 40%));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(160 35% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 86% 45%), hsl(217 91% 65%), hsl(120 100% 40%));
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +139,75 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Custom animations for gamification */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 20px hsl(var(--accent) / 0.3); }
+    to { box-shadow: 0 0 30px hsl(var(--accent) / 0.6), 0 0 40px hsl(var(--accent) / 0.3); }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-5px) scale(1.02); }
+  }
+}
+
+@layer components {
+  /* Eco-themed progress bar */
+  .progress-eco {
+    @apply bg-muted rounded-full overflow-hidden relative;
+  }
+
+  .progress-eco::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary via-accent to-success rounded-full transition-all duration-500;
+    transform: translateX(-100%);
+  }
+
+  .progress-eco[data-value="25"]::after { transform: translateX(-75%); }
+  .progress-eco[data-value="50"]::after { transform: translateX(-50%); }
+  .progress-eco[data-value="75"]::after { transform: translateX(-25%); }
+  .progress-eco[data-value="100"]::after { transform: translateX(0%); }
+
+  /* Gamification badges */
+  .badge-eco {
+    @apply relative inline-flex items-center justify-center w-16 h-16 rounded-full;
+    background: var(--gradient-eco);
+    box-shadow: var(--shadow-eco);
+  }
+
+  .badge-eco::before {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-gradient-to-t from-transparent to-white/20;
+  }
+
+  /* Interactive card hover effects */
+  .card-interactive {
+    @apply transition-all duration-300 cursor-pointer;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-interactive:hover {
+    @apply -translate-y-2;
+    box-shadow: var(--shadow-eco);
   }
 }

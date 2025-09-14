@@ -1,17 +1,15 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 
-const Index = () => {
+const FeaturesPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main>
-        <Hero />
+      <main className="pt-16">
         <Features />
       </main>
     </div>
   );
 };
 
-export default Index;
+export default FeaturesPage;
