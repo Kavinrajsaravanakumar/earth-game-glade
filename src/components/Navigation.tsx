@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Leaf, Award, BookOpen, Users, Mail } from "lucide-react";
+import { Menu, X, Leaf, Award, BookOpen, Users, Mail, Globe, Camera } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,8 @@ const Navigation = () => {
     { name: "Features", path: "/features", icon: Award },
     { name: "About", path: "/about", icon: BookOpen },
     { name: "Contact", path: "/contact", icon: Mail },
+    { name: "AR Studios", path: "/ar-studios", icon: Globe },
+    { name: "Explore Nature", path: "/explore-nature", icon: Camera },
   ];
 
   return (

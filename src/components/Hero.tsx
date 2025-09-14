@@ -56,8 +56,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3">
-              Start Your Journey
+            <Button 
+              size="lg" 
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3"
+              onClick={() => window.location.href = '/get-started'}
+            >
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button variant="outline" size="lg" className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 px-8 py-3">
