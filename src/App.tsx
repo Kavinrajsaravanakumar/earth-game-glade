@@ -13,6 +13,7 @@ import ExploreNature from "./pages/ExploreNature";
 import GetStarted from "./pages/GetStarted";
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
+import SaveTheForest from "./pages/SaveTheForest";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/get-started" element={<GetStarted />} />
           <Route path="/student-dashboard" element={<StudentDashboard />} />
           <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+          <Route path="/save-the-forest" element={<SaveTheForest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

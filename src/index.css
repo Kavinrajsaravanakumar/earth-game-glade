@@ -142,6 +142,11 @@ All colors MUST be HSL. Eco-friendly, modern, youthful palette.
     @apply bg-background text-foreground font-inter;
   }
 
+  /* Kid-friendly font for Save the Forest game */
+  .font-comic {
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  }
+
   /* Custom animations for gamification */
   .animate-float {
     animation: float 3s ease-in-out infinite;
